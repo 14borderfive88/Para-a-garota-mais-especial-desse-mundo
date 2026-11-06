@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff4f5">
+  <title>Um carinho para você ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="floating-hearts" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#inicio">com carinho <span>♡</span></a>
+
+    <div class="music-mini" id="musicMini">
+      <span class="music-equalizer">
+        <i></i><i></i><i></i>
+      </span>
+
+      <span>I Will — Mitski</span>
+
+      <button id="miniPlay" class="icon-button" aria-label="Reproduzir música">
+        ▶
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- INÍCIO -->
+    <section class="hero section" id="inicio">
+
+      <div class="hero-copy">
+        <p class="eyebrow">um cantinho feito especialmente para você</p>
+
+        <h1>
+          Se eu pudesse,<br>
+          <em>estaria aí.</em>
+        </h1>
+
+        <p class="hero-text">
+          Eu queria te entregar algumas coisinhas, te ver sorrir
+          e te dar um abraço bem apertado. Como a distância
+          não deixa agora, preparei uma pequena surpresa para você.
+        </p>
+
+        <button class="primary-button" id="startButton">
+          Começar minha surpresa <span>♡</span>
+        </button>
+
+        <p class="tiny-note">
+          coloque seu coração confortável e aproveite ♡
+        </p>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun-glow"></div>
+
+        <div class="hero-flower flower-a">✿</div>
+        <div class="hero-flower flower-b">✿</div>
+        <div class="hero-flower flower-c">✿</div>
+
+        <div class="hero-envelope">
+          <span>♡</span>
+        </div>
+
+        <div class="hero-sparkle sparkle-a">✧</div>
+        <div class="hero-sparkle sparkle-b">✦</div>
+
+        <div class="hero-caption">
+          feito com carinho,<br>mesmo de longe
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- MENSAGEM INICIAL -->
+    <section class="section intro-section reveal" id="recado">
+
+      <p class="eyebrow">antes dos presentinhos...</p>
+
+      <h2>
+        Quero que você saiba<br>
+        <em>uma coisa.</em>
+      </h2>
+
+      <p class="intro-message">
+        Você é uma pessoa muito importante para mim.
+        Eu amo o seu jeitinho, a sua presença e a forma
+        como você consegue deixar meus dias mais especiais.
+        Talvez eu não consiga colocar tudo o que sinto em palavras,
+        mas nunca quero que você duvide do carinho enorme
+        que tenho por você.
+      </p>
+
+      <div class="little-divider">
+        <span>♡</span>
+      </div>
+
+      <p class="handwritten">
+        Você merece se sentir querida, hoje e sempre.
+      </p>
+
+    </section>
+
+
+    <!-- PRESENTES -->
+    <section class="section gifts-section reveal" id="presentes">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">abra quando quiser</p>
+
+        <h2>
+          Quatro presentinhos<br>
+          <em>para você.</em>
+        </h2>
+
+        <p>
+          Eu queria poder colocar cada um deles nas suas mãos.
+          Por enquanto, toque nos presentinhos para descobrir
+          o que preparei.
+        </p>
+
+      </div>
+
+
+      <div class="gift-grid">
+
+        <button class="gift-card" data-gift="flowers" aria-expanded="false">
+          <span class="gift-emoji">💐</span>
+          <span class="gift-title">Um buquê</span>
+          <span class="gift-hint">toque para abrir</span>
+          <span class="gift-reveal">
+            Flores para lembrar que você merece beleza,
+            delicadeza e coisas boas em todos os seus dias. 🌷
+          </span>
+        </button>
+
+
+        <button class="gift-card" data-gift="chocolate" aria-expanded="false">
+          <span class="gift-emoji">🍫</span>
+          <span class="gift-title">Um docinho</span>
+          <span class="gift-hint">toque para abrir</span>
+          <span class="gift-reveal">
+            Uma caixinha cheia de chocolates — porque eu
+            queria adoçar um pouquinho o seu dia. ♡
+          </span>
+        </button>
+
+
+        <button class="gift-card" data-gift="plush" aria-expanded="false">
+          <span class="gift-emoji">🧸</span>
+          <span class="gift-title">Uma pelúcia</span>
+          <span class="gift-hint">toque para abrir</span>
+          <span class="gift-reveal">
+            Um ursinho para ficar pertinho de você
+            e guardar o abraço que estou te devendo.
+          </span>
+        </button>
+
+
+        <button class="gift-card" data-gift="hug" aria-expanded="false">
+          <span class="gift-emoji">🫂</span>
+          <span class="gift-title">Um abraço</span>
+          <span class="gift-hint">toque para abrir</span>
+          <span class="gift-reveal">
+            Esse é o que eu mais queria conseguir entregar
+            pessoalmente. Então fiz um abraço especialmente para você.
+          </span>
+        </button>
+
+      </div>
+
+
+      <!-- ANIMAÇÃO DAS FLORES -->
+      <div class="flower-stage gift-stage" id="flowersStage" aria-hidden="true">
+
+        <div class="bouquet">
+
+          <span class="stem stem-one"></span>
+          <span class="stem stem-two"></span>
+          <span class="stem stem-three"></span>
+
+          <span class="bloom bloom-one">✿</span>
+          <span class="bloom bloom-two">✿</span>
+          <span class="bloom bloom-three">✿</span>
+
+          <span class="bouquet-wrap"></span>
+
+        </div>
+
+        <p>um buquê que não murcha no caminho ♡</p>
+
+      </div>
+
+
+      <!-- ANIMAÇÃO DOS CHOCOLATES -->
+      <div class="chocolate-stage gift-stage" id="chocolateStage" aria-hidden="true">
+
+        <button class="choco-box" id="chocoBox" aria-label="Abrir caixa de chocolates">
+
+          <span class="choco-lid">♡</span>
+
+          <span class="choco-inside">
+            🍫 🍬 🍫<br>
+            🍬 🍫 🍬
+          </span>
+
+        </button>
+
+        <p>feito para deixar seu dia mais doce</p>
+
+      </div>
+
+
+      <!-- ANIMAÇÃO DA PELÚCIA -->
+      <div class="plush-stage gift-stage" id="plushStage" aria-hidden="true">
+
+        <div class="plush-bear">
+          🧸
+          <span>♡</span>
+        </div>
+
+        <p>ele está guardando um abraço meu para você</p>
+
+      </div>
+
+
+      <!-- ANIMAÇÃO DO ABRAÇO -->
+      <div class="hug-stage gift-stage" id="hugStage" aria-hidden="true">
+
+        <div class="hug-scene">
+
+          <div class="hug-person person-left">
+            <span>♡</span>
+          </div>
+
+          <div class="hug-person person-right">
+            <span>♡</span>
+          </div>
+
+          <div class="hug-heart">♥</div>
+
+        </div>
+
+        <p>se a distância deixasse, eu já estaria aí.</p>
+
+      </div>
+
+    </section>
+
+
+    <!-- DECLARAÇÃO -->
+    <section class="section declaration-section reveal" id="declaracao">
+
+      <div class="declaration-card">
+
+        <span class="card-flower">✿</span>
+
+        <p class="eyebrow">
+          uma coisa que eu queria te dizer olhando nos seus olhos
+        </p>
+
+        <h2>
+          Você é <em>muito especial.</em>
+        </h2>
+
+        <p>
+          Eu queria que você pudesse enxergar, nem que fosse
+          por um instante, o quanto é importante para mim.
+          Gosto de ter você na minha vida, das nossas conversas,
+          das lembranças que construímos e até das pequenas
+          coisas que talvez pareçam simples, mas que significam
+          muito para mim.
+        </p>
+
+        <p>
+          Eu amo você. E, mesmo quando não consigo estar perto,
+          meu carinho continua aqui. Não quero que esse site
+          substitua flores de verdade, chocolates divididos,
+          uma pelúcia escolhida com cuidado ou um abraço demorado.
+          Quero apenas que ele seja um jeitinho de te lembrar
+          que eu queria muito te proporcionar tudo isso.
+        </p>
+
+        <p>
+          Obrigado por ser você e por fazer parte da minha vida.
+          Espero que, quando a gente puder se encontrar,
+          eu consiga transformar esses presentinhos virtuais
+          em momentos de verdade.
+        </p>
+
+        <div class="signature">
+          com todo o meu carinho <span>♡</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+    <section class="section final-section reveal" id="final">
+
+      <div class="final-star">✧</div>
+
+      <p class="eyebrow">até o nosso abraço de verdade</p>
+
+      <h2>
+        Por enquanto,<br>
+        <em>fica com esse.</em>
+      </h2>
+
+      <div class="final-hug">🫂</div>
+
+      <p>
+        Um abraço daqui até aí.
+        E mais um, só porque um nunca seria suficiente.
+      </p>
+
+      <button class="text-button" id="backToTop">
+        ver novamente ↑
+      </button>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    feito com carinho, pensando em você ♡
+  </footer>
+
+
+  <!-- ARQUIVO DA MÚSICA -->
+  <audio id="siteAudio" preload="metadata">
+    <source src="I Will.mp3" type="audio/mpeg">
+    Seu navegador não conseguiu carregar o áudio.
+  </audio>
+
+
+  <!-- PLAYER -->
+  <aside class="music-player" aria-label="Player de música">
+
+    <div class="album-art" aria-hidden="true">
+      <span>I<br>WILL</span>
+      <small>MITSKI</small>
+    </div>
+
+    <div class="player-details">
+
+      <strong>I Will</strong>
+      <span>Mitski</span>
+
+      <div class="progress-row">
+
+        <span id="currentTime">0:00</span>
+
+        <input
+          id="progress"
+          type="range"
+          min="0"
+          max="100"
+          value="0"
+          step="0.1"
+          aria-label="Progresso da música"
+        >
+
+        <span id="duration">0:00</span>
+
+      </div>
+
+    </div>
+
+    <button id="playerPlay" class="player-play" aria-label="Reproduzir música">
+      ▶
+    </button>
+
+    <label class="volume-control" aria-label="Volume">
+
+      <span>♪</span>
+
+      <input
+        id="volume"
+        type="range"
+        min="0"
+        max="1"
+        value="0.75"
+        step="0.01"
+      >
+
+    </label>
+
+  </aside>
+
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
